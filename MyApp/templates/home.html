@@ -1,0 +1,30 @@
+<h2> Context Application </h2>
+
+<h4> {{ Name }} </h4>
+<h4> {{ Age }} </h4> 
+<h4> {{ L }} </h4> 
+
+{% if Age > 20 %}
+    <p> You are Eligible for apply </p>
+{% elif Age <= 20 %}
+    <b> You are teenager </b>
+{% else %}
+    <strong> You are child </strong>
+{% endif %}
+
+{% for a in employees  %}
+    <p><b> {{ a.id }} - {{ a.name }} - {{ a.Designation }} </b></p>
+{% endfor %}
+
+
+{{ data }}
+
+<h4> {{ data | join:"-" }} </h4>
+
+<h4> {{ data | join:"/" }} </h4>
+
+<h3> Date {{ birtday }} </h3>
+<h3> Date {{ birtday | date:"D d M Y" }} </h3>
+
+
+<p>{{ 'Happy coding' | truncatechars:6 }}</p>
